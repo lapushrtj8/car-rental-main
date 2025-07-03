@@ -3,7 +3,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 1rem 2rem;
-background-color: #ffffff;
+background-color: #0c0101;
 border-bottom: 1px solid #ddd;
 position: sticky;
 top: 0;
@@ -13,7 +13,7 @@ z-index: 1000;
 .navbar-left h2 {
 font-size: 1.8rem;
 margin: 0;
-color: #333;
+color: #f1f1f1;
 }
 
 .navbar-right {
@@ -24,11 +24,11 @@ gap: 1.5rem;
 
 .navbar-right a {
 text-decoration: none;
-color: #333;
+color: #fcf5f5;
 font-size: 1rem;
 transition: color 0.2s ease;
 }
 
 .navbar-right a:hover {
-color: #007bff;
+color: #c4639b;
 }

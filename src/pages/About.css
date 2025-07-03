@@ -1,42 +1,101 @@
 .about-container {
-max-width: 800px;
-margin: 2rem auto;
-padding: 2rem;
-background-color: #ffffff;
-border-radius: 10px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 40px 20px;
 font-family: 'Segoe UI', sans-serif;
-color: #333;
+color: #222;
+max-width: 1200px;
+margin: auto;
+}
+
+/* Hero Section */
+.about-hero {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+background-color: #f5f5f5;
+border-radius: 12px;
+padding: 40px;
+margin-bottom: 60px;
+}
+
+.about-hero-text {
+flex: 1 1 50%;
+}
+
+.about-hero h1 {
+font-size: 36px;
+margin-bottom: 15px;
+}
+
+.about-hero p {
+font-size: 18px;
+color: #555;
+}
+
+.about-hero-img {
+flex: 1 1 40%;
+max-width: 400px;
+width:100%;
+height: auto;
+border-radius: 8px;
+margin-top: 20px;
+}
+
+/* Mission Section */
+.about-mission {
+text-align: center;
+margin-bottom: 60px;
+}
+
+.about-mission h2 {
+font-size: 28px;
+margin-bottom: 15px;
+}
+
+.about-mission p {
+font-size: 17px;
+color: #444;
 line-height: 1.6;
+max-width: 800px;
+margin: auto;
 }
 
-.about-container h2 {
-color: #2c3e50;
-margin-bottom: 1rem;
-font-size: 2rem;
+/* Values Section */
+.about-values h2 {
+font-size: 28px;
+margin-bottom: 30px;
+text-align: center;
 }
 
-.about-container h3 {
-margin-top: 2rem;
-color: #007bff;
+.value-cards {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 25px;
 }
 
-.about-container ul {
-list-style: none;
-padding-left: 0;
-margin: 1rem 0;
+.value-card {
+background-color: #fafafa;
+border-radius: 10px;
+padding: 25px;
+max-width: 250px;
+text-align: center;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-.about-container ul li {
-margin-bottom: 0.5rem;
-padding-left: 1.2rem;
-position: relative;
+.value-card img {
+width: 60px;
+height: 60px;
+margin-bottom: 15px;
 }
 
-.about-container ul li::before {
-content: "•";
-color: #007bff;
-font-weight: bold;
-position: absolute;
-left: 0;
+.value-card h3 {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.value-card p {
+color: #666;
+font-size: 15px;
+line-height: 1.4;
 }

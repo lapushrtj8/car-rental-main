@@ -4,28 +4,54 @@ import './About.css';
 const About = () => {
 return (
 <div className="about-container">
-<h2>About Premium Car Rentals</h2>
+
+<section className="about-hero">
+<div className="about-hero-text">
+<h1>Drive Your Journey with Confidence</h1>
+<p>We make renting a car easy, accessible, and affordable — for everyone, everywhere.</p>
+</div>
+<img
+src="img_3536.JPG"
+alt="Drive with confidence"
+className="about-hero-img"
+/>
+</section>
+
+<section className="about-mission">
+<h2>Our Mission</h2>
 <p>
-Welcome to <strong>Premium Car Rentals</strong>, your trusted platform for seamless car rental experiences.
-Whether you're planning a weekend getaway, a business trip, or just need a ride across town — we've got you covered.
+At Premium Car Rentals, we’re redefining the car rental experience by offering flexible, affordable, and reliable self-drive car rentals. Whether it's a weekend getaway or daily commute, we make transportation seamless.
 </p>
+</section>
 
-<h3>Why Choose Us?</h3>
-<ul>
-<li>✅ Wide range of cars: SUVs, sedans, hatchbacks & more</li>
-<li>✅ Affordable daily pricing</li>
-<li>✅ Easy online booking & cancellation</li>
-<li>✅ Trusted by 1,000+ happy customers</li>
-</ul>
+<section className="about-values">
+<h2>Why Choose Us?</h2>
+<div className="value-cards">
+<div className="value-card">
+<img src="https://cdn-icons-png.flaticon.com/512/1086/1086741.png" alt="Convenience" />
+<h3>Convenience</h3>
+<p>Book your car in minutes from any device, any time.</p>
+</div>
+<div className="value-card">
+<img src="https://cdn-icons-png.flaticon.com/512/2620/2620995.png" alt="Affordable" />
+<h3>Affordable Rates</h3>
+<p>Flexible pricing with no hidden charges.</p>
+</div>
+<div className="value-card">
+<img src="https://cdn-icons-png.flaticon.com/512/1046/1046861.png" alt="Delivery" />
+<h3>Doorstep Delivery</h3>
+<p>We deliver cars to your location for ultimate convenience.</p>
+</div>
+<div className="value-card">
+<img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Support" />
+<h3>24/7 Support</h3>
+<p>Our team is here to help — anytime, anywhere.</p>
+</div>
+</div>
+</section>
 
-<p>
-Our mission is to make renting a car as easy and convenient as possible — with clear pricing, no hidden fees,
-and friendly customer support.
-</p>
-
-<p><em>Drive your journey, your way — with Premium Car Rentals 🚗</em></p>
 </div>
 );
 };
 
-export default About;
+export default About

@@ -9,6 +9,7 @@ const Navbar=()=>{
             </div>
             <div className='navbar-right'>
                 <a href="/">Home</a>
+                <a href="/Cars">Cars</a>
                  <a href="/Login">Login </a>
                 <a href="/about">About us</a>
                
