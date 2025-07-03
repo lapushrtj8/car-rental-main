@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.css'; // Optional CSS for styling
-
+import { useState } from 'react';
 const Login = () => {
 const [isSignUp, setIsSignUp] = useState(false);
 const [formData, setFormData] = useState({
