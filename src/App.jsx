@@ -6,6 +6,7 @@ import Confirmation from './components/confirmation';
 import Navbar from './components/Navbar';
 import Login from './pages/Login';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
+import About from './pages/About';
 
 function App() {
   // State management
@@ -96,6 +97,7 @@ function App() {
         <p>Find the perfect car for your next adventure</p>
         <Routes>
           <Route path="/Login" element={< Login />}/>
+          <Route path="/about" element={<About />}/>
         </Routes>
       </header>
 
