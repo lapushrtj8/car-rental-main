@@ -9,6 +9,7 @@ import {BrowserRouter,Routes,Route} from "react-router-dom";
 import About from './pages/About';
 import Home from './pages/Home';
 import Cars from './pages/Cars';
+import AddCarForm from './pages/AddCarForm';
 
 function App() {
   return(
@@ -24,6 +25,8 @@ function App() {
           <Route path="/Cars" element={<Cars />}/>
           <Route path="/Login" element={< Login />}/>
           <Route path="/about" element={<About />}/>
+          <Route path="/addcar" element={<AddCarForm />}/>
+
         </Routes>
       </header>
        </div>
