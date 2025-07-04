@@ -10,7 +10,7 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Cars from './pages/Cars';
 import AddCarForm from './pages/AddCarForm';
-
+import Admin from './pages/Admin';
 function App() {
   return(
   <BrowserRouter>
@@ -26,7 +26,7 @@ function App() {
           <Route path="/Login" element={< Login />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/addcar" element={<AddCarForm />}/>
-
+          <Route path="/admin-dashboard" element={<Admin />}/>
         </Routes>
       </header>
        </div>

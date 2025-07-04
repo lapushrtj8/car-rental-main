@@ -1,15 +1,18 @@
 import BookingForm from '../components/bookingForm';
 import CarCard from '../components/carcard';
 import Confirmation from '../components/confirmation';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import './Cars.css'
-const Cars=()=>{
-    const [selectedCar, setSelectedCar] = useState(null);
+const Cars = () => {
+  const [fetchedCars, setFetchedCars] = useState([]); // ✅ store backend cars
+  const [selectedCar, setSelectedCar] = useState(null);
   const [pickupDate, setPickupDate] = useState('');
   const [returnDate, setReturnDate] = useState('');
   const [formStep, setFormStep] = useState(1);
-  const cars = [
+
+  // ✅ Hardcoded cars
+  const hardcodedCars = [
     {
       id: 1,
       name: 'Hundai Creta',
@@ -51,7 +54,18 @@ const Cars=()=>{
       imageAlt: 'Red Ford Mustang sports car on highway'
     }
   ];
- // Handlers
+
+  // ✅ Fetch cars from backend and store them
+  useEffect(() => {
+    fetch('http://localhost:8010/api/cars')
+      .then((res) => res.json())
+      .then((data) => setFetchedCars(data))
+      .catch((err) => console.error("Error fetching cars:", err));
+  }, []);
+
+  // ✅ Combine hardcoded and fetched cars
+  const allCars = [...hardcodedCars ,...fetchedCars];
+
   const handleCarSelect = (car) => {
     setSelectedCar(car);
     setFormStep(2);
@@ -74,25 +88,26 @@ const Cars=()=>{
 
   const calculateTotalPrice = () => {
     if (!pickupDate || !returnDate) return 0;
-    const days = Math.ceil((new Date(returnDate) - new Date(pickupDate)) / (1000 * 60 * 60 * 24));
+    const days = Math.ceil(
+      (new Date(returnDate) - new Date(pickupDate)) / (1000 * 60 * 60 * 24)
+    );
     return days * parseInt(selectedCar.price.replace(/\D/g, ''));
   };
-  return(
+
+  return (
     <>
-    {formStep === 1 && (
-          <div className="car-list">
-            {/* Using CarCard component for each car */}
-            {cars.map((car) => (
-              <CarCard 
-                key={car.id} 
-                car={car} 
-                onClick={handleCarSelect} 
-              />
-            ))}
+      {formStep === 1 && (
+        <div className="car-list">
+          {allCars.map((car, index) => (
+            <CarCard
+              key={car._id || car.id || index}
+              car={car}
+              onClick={handleCarSelect}
+            />
+          ))}
         </div>
       )}
 
-      {/* STEP 2: Booking Form */}
       {formStep === 2 && selectedCar && (
         <BookingForm
           car={selectedCar}
@@ -105,7 +120,6 @@ const Cars=()=>{
         />
       )}
 
-      {/* STEP 3: Confirmation */}
       {formStep === 3 && selectedCar && (
         <Confirmation
           car={selectedCar}
@@ -116,7 +130,7 @@ const Cars=()=>{
         />
       )}
     </>
-
   );
 };
+
 export default Cars;
