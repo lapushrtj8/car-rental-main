@@ -9,4 +9,16 @@ Currently, two official plugins are available:
 
 ## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ Simple Car Rental Website
+This is the frontend of a simple car rental web application, built with react.js Vite, HTML, and CSS. It connects to a backend API (hosted separately) to manage car listings and bookings.The backend code is available in a separate repository: carb
+Frontend: React.js, Vite, HTML, CSS
+Backend (external): Node.js, Express.js, MongoDB
+Features
+Users can:
+    View available cars for rent
+    Book cars with selected dates
+Admin can:
+    Add new cars
+    Delete existing cars
+
+
